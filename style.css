@@ -291,7 +291,6 @@ section{scroll-margin-top:76px}
 }
 .project-diagram svg,.project-diagram img{width:100%;height:auto}
 .project-diagram-aws{background:#F7F8F9}
-.project-card-featured:has(.project-body:only-child){grid-template-columns:1fr}
 .roadmap-list{
   display:flex;flex-wrap:wrap;gap:10px 24px;
   margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--border);
