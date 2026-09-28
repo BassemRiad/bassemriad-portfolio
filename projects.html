@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Bassem Riad</title>
+<meta name="description" content="Cloud projects built by Bassem Riad on AWS, one bootcamp milestone at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="skip"><a href="#main">Skip to content</a></div>
+
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html"><span class="nav-brand-mono">$</span> bassemriad</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html"><em>01</em>Home</a>
+      <a href="about.html"><em>02</em>About</a>
+      <a href="skills.html"><em>03</em>Skills</a>
+      <a href="certifications.html"><em>04</em>Certs</a>
+      <a href="projects.html" class="active"><em>05</em>Projects</a>
+      <a href="resume.html"><em>06</em>Resume</a>
+      <a href="contact.html"><em>07</em>Contact</a>
+      <a href="https://blog.bassemriad.com" target="_blank" rel="noopener"><em>08</em>Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-header">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow"># 05 projects/</p>
+      <h1 class="section-title">Projects</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <ol class="roadmap-list">
+        <li class="is-done"><span class="roadmap-dot"></span>Static Website Hosting <em>— shipped</em></li>
+        <li class="is-done"><span class="roadmap-dot"></span>Three-Tier Web Application <em>— shipped</em></li>
+        <li><span class="roadmap-dot"></span>Serverless Application</li>
+        <li><span class="roadmap-dot"></span>Event-Driven Application</li>
+        <li><span class="roadmap-dot"></span>Containerized Application</li>
+        <li><span class="roadmap-dot"></span>Capstone Project</li>
+      </ol>
+
+      <article class="project-card project-card-featured">
+        <div class="project-diagram project-diagram-aws" aria-hidden="true">
+          <img src="assets/shopme-architecture.png" alt="" width="898" height="449" loading="lazy">
+        </div>
+        <div class="project-body">
+          <div class="project-body-head">
+            <h3>Shopme — Serverless E-Commerce on AWS</h3>
+            <span class="subdomain">static-website.bassemriad.com <em>(coming soon)</em></span>
+          </div>
+          <p>
+            A static storefront — product search, cart, checkout UI — served from
+            a private S3 bucket behind CloudFront. HTTPS runs on a free ACM
+            certificate, DNS is on Route&nbsp;53 with a custom domain, and a
+            CloudWatch dashboard tracks CloudFront and S3 request metrics. A
+            GitHub Actions pipeline deploys on every push to <code>main</code>,
+            authenticating to AWS via short-lived OIDC credentials instead of
+            stored access keys.
+          </p>
+          <div class="chips">
+            <span>S3</span><span>CloudFront</span><span>Route 53</span><span>ACM</span>
+            <span>CloudWatch</span><span>GitHub Actions</span><span>OIDC</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/BassemRiad/serverless-ecommerce-aws" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card project-card-featured">
+        <div class="project-body">
+          <div class="project-body-head">
+            <h3>Three-Tier Web Application — WordPress on AWS</h3>
+            <span class="subdomain">blog.bassemriad.com</span>
+          </div>
+          <p>
+            A classic three-tier architecture — load-balanced, auto-scaling
+            WordPress on EC2, a private MySQL RDS tier (with a read replica),
+            and shared EFS storage for uploads — fronted by CloudFront and
+            cached with ElastiCache Redis. Built one step at a time with
+            CloudFormation, including a CI/CD pipeline that redeploys on
+            every push via GitHub OIDC.
+          </p>
+          <div class="chips">
+            <span>VPC</span><span>EC2 &amp; Auto Scaling</span><span>RDS</span>
+            <span>EFS</span><span>ElastiCache</span><span>CloudFront</span>
+            <span>GitHub Actions</span><span>OIDC</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/BassemRiad/three-tier-web-app-aws" target="_blank" rel="noopener">View on GitHub →</a>
+            <a href="https://blog.bassemriad.com" target="_blank" rel="noopener">Visit the blog →</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="project-grid-minor">
+        <div class="project-card-minor">
+          <span class="soon">Coming soon</span>
+          <h4>Serverless Application</h4>
+          <p>DynamoDB · Lambda · API Gateway · Cognito</p>
+          <span class="subdomain">serverless-app.bassemriad.com</span>
+        </div>
+        <div class="project-card-minor">
+          <span class="soon">Coming soon</span>
+          <h4>Event-Driven Application</h4>
+          <p>EventBridge · SQS · SNS · Lambda</p>
+          <span class="subdomain">event-driven-app.bassemriad.com</span>
+        </div>
+        <div class="project-card-minor">
+          <span class="soon">Coming soon</span>
+          <h4>Containerized Application</h4>
+          <p>Docker · ECR · ECS/Fargate</p>
+          <span class="subdomain">containerized-app.bassemriad.com</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Bassem Riad</span>
+    <a href="#" class="footer-top">back to top ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
